@@ -14,7 +14,6 @@ public class WeatherDemoServiceImpl implements WeatherDemoService {
     @Override
     public String getWeather(String url) throws IOException {
        StringBuilder sb=new StringBuilder();
-        StringBuilder sb1=new StringBuilder();
        Document doc = Jsoup.connect(url).get();
         Elements content = doc.getElementsByClass("con today clearfix");
         for (Element e : content) {
